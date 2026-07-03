@@ -1,0 +1,11 @@
+{
+  "name": "no-script-execution",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "node -e \"require('fs').writeFileSync('script-was-run.txt','preinstall')\"",
+    "install": "node -e \"require('fs').writeFileSync('script-was-run.txt','install')\"",
+    "build": "node -e \"require('fs').writeFileSync('script-was-run.txt','build')\"",
+    "test": "node -e \"require('fs').writeFileSync('script-was-run.txt','test')\"",
+    "deploy": "node -e \"require('fs').writeFileSync('script-was-run.txt','deploy')\""
+  }
+}

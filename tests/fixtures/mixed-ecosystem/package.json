@@ -1,0 +1,9 @@
+{
+  "name": "mixed-ecosystem",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit"
+  }
+}

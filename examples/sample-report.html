@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Project Doctor Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        color: #172026;
+        background: #f7f8fa;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
+      .summary,
+      .finding {
+        background: #fff;
+        border: 1px solid #d8dee4;
+        border-radius: 8px;
+        padding: 18px;
+        margin: 14px 0;
+      }
+      .score {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .counts {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .counts div {
+        background: #eef2f6;
+        padding: 10px;
+        border-radius: 6px;
+      }
+      .high {
+        border-left: 5px solid #b42318;
+      }
+      .medium {
+        border-left: 5px solid #b54708;
+      }
+      .low {
+        border-left: 5px solid #175cd3;
+      }
+      .info {
+        border-left: 5px solid #475467;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Agent Project Doctor Report</h1>
+      <section class="summary">
+        <div class="score">57/100</div>
+        <p><strong>Grade:</strong> C</p>
+        <p>
+          <strong>Scanned path:</strong>
+          C:\Users\35834\Documents\Codex\2026-07-03\github-agent\work\agent-project-doctor\tests\fixtures\agent-ready-node
+        </p>
+        <p><strong>Generated:</strong> 2026-07-03T03:49:43.179Z</p>
+        <p>
+          This is a local best-effort readiness signal scan, not a security
+          certification.
+        </p>
+      </section>
+      <section class="summary">
+        <h2>Severity Counts</h2>
+        <div class="counts">
+          <div><strong>high</strong><br />1</div>
+          <div><strong>medium</strong><br />2</div>
+          <div><strong>low</strong><br />4</div>
+          <div><strong>info</strong><br />1</div>
+        </div>
+      </section>
+      <section>
+        <h2>Findings</h2>
+        <article class="finding low">
+          <h3>License file is missing</h3>
+          <p>
+            <strong>Severity:</strong> low ·
+            <strong>Category:</strong> documentation
+          </p>
+          <p>No license file was detected.</p>
+          <p>
+            <strong>Recommendation:</strong> Add a license file so agents and
+            contributors know reuse terms.
+          </p>
+          <p><strong>Evidence:</strong> LICENSE* not found</p>
+        </article>
+        <article class="finding low">
+          <h3>Test directory is missing</h3>
+          <p>
+            <strong>Severity:</strong> low · <strong>Category:</strong> testing
+          </p>
+          <p>No common test directory was detected.</p>
+          <p>
+            <strong>Recommendation:</strong> Add tests under tests/, test/,
+            spec/, or __tests__.
+          </p>
+          <p><strong>Evidence:</strong> No common test directory found</p>
+        </article>
+        <article class="finding low">
+          <h3>CI test signal is missing</h3>
+          <p>
+            <strong>Severity:</strong> low · <strong>Category:</strong> testing
+          </p>
+          <p>No CI workflow with an obvious test command was detected.</p>
+          <p>
+            <strong>Recommendation:</strong> Add or document CI validation so
+            agents know expected checks.
+          </p>
+          <p>
+            <strong>Evidence:</strong> .github/workflows test command not found
+          </p>
+        </article>
+        <article class="finding info">
+          <h3>Cursor rules detected</h3>
+          <p>
+            <strong>Severity:</strong> info · <strong>Category:</strong> agent
+          </p>
+          <p>Cursor rules exist.</p>
+          <p>
+            <strong>Recommendation:</strong> Summarize shared guidance in
+            AGENTS.md for cross-agent use.
+          </p>
+          <p><strong>Evidence:</strong> .cursor/rules/</p>
+        </article>
+        <article class="finding low">
+          <h3>.gitignore is missing</h3>
+          <p>
+            <strong>Severity:</strong> low ·
+            <strong>Category:</strong> environment
+          </p>
+          <p>No .gitignore file was detected.</p>
+          <p>
+            <strong>Recommendation:</strong> Add .gitignore and include .env
+            patterns.
+          </p>
+          <p><strong>Evidence:</strong> .gitignore not found</p>
+        </article>
+        <article class="finding high">
+          <h3>Production deploy language detected</h3>
+          <p>
+            <strong>Severity:</strong> high · <strong>Category:</strong> safety
+          </p>
+          <p>Docs or agent instructions mention production deployment.</p>
+          <p>
+            <strong>Recommendation:</strong> Require explicit approval and
+            staging guidance before production deploys.
+          </p>
+          <p><strong>Evidence:</strong> production deploy phrase</p>
+        </article>
+        <article class="finding medium">
+          <h3>Secret handling guidance is weak</h3>
+          <p>
+            <strong>Severity:</strong> medium ·
+            <strong>Category:</strong> safety
+          </p>
+          <p>
+            Docs mention secrets or environment files without clear handling
+            guidance.
+          </p>
+          <p>
+            <strong>Recommendation:</strong> Add guidance to avoid committing or
+            printing secrets.
+          </p>
+          <p><strong>Evidence:</strong> secret-related wording</p>
+        </article>
+        <article class="finding medium">
+          <h3>CI workflow is missing</h3>
+          <p>
+            <strong>Severity:</strong> medium · <strong>Category:</strong> ci
+          </p>
+          <p>No GitHub Actions workflow was detected.</p>
+          <p>
+            <strong>Recommendation:</strong> Add a workflow that runs validation
+            commands.
+          </p>
+          <p><strong>Evidence:</strong> .github/workflows not found</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
