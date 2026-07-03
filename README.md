@@ -1,5 +1,7 @@
 # Agent Project Doctor
 
+![Agent Project Doctor report preview](assets/agent-project-doctor-social-card.png)
+
 Before handing a repo to an AI coding agent, run a quick local checkup.
 
 `agent-project-doctor` is a local TypeScript CLI for maintainers and developers who want to understand whether a repository has enough docs, validation guidance, agent instructions, and safety boundaries for tools like Codex, Claude Code, Cursor, Cline, and similar AI coding agents.
