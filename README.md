@@ -16,7 +16,22 @@ No code upload. No LLM calls. No target repo scripts executed.
 
 ## Quick Start
 
-Clone and run it locally:
+Run it from the repository you want to scan:
+
+```bash
+npx --yes github:jiusi1-cpu/agent-project-doctor scan --path . --out .agent-project-doctor
+```
+
+This project is not published to npm yet. The command above installs and runs the CLI directly from GitHub; do not use `npx agent-project-doctor` unless an npm package is published later.
+
+If the GitHub `npx` command fails, check that:
+
+- Node.js 20 or newer is installed.
+- Git is installed and available on your `PATH`.
+- Your network can reach GitHub and the npm registry.
+- npm lifecycle scripts are enabled.
+
+Fallback: clone and run it locally:
 
 ```bash
 git clone https://github.com/jiusi1-cpu/agent-project-doctor.git
@@ -26,7 +41,7 @@ npm run build
 node dist/cli.js scan --path ../your-repo --out ../your-repo/.agent-project-doctor
 ```
 
-Or scan this project itself after building:
+Or scan this project itself after building locally:
 
 ```bash
 node dist/cli.js scan --out .agent-project-doctor
